@@ -1,0 +1,71 @@
+module (a -> N, b -> W) ==> plus ==> (bPlus0, b_Plus_a) 
+    // repeat b 
+    (b -> W) ==> send [(W, S), (W, E)] ==> (S -> bCopyS, E -> bCopyE) 
+    
+    // if a == 0, output b 
+    (a -> N) ==> case N of S, E ==> (S -> aMinus1, E -> aIsZero) 
+    (bCopyE -> N, aIsZero -> W) ==> send [(N, E)] ==> (E -> bPlus0) 
+
+    // calc: b + (a - 1) 
+    (bCopyS -> W, aMinus1 -> N) ==> use plus ==> (E -> b_Plus_a_Minus1) 
+    (b_Plus_a_Minus1 -> W) ==> send [(Inl W, E)] ==> (E -> b_Plus_a)
+end
+
+module (a -> N, b -> W) ==> mult ==> (v0) 
+    // repeat b
+    (b -> W) ==> send [(W, S), (W, E)] ==> (S -> bCopyS, E -> bCopyE) 
+    
+    // if a == 0, output 0 
+    (a -> N) ==> case N of S, E ==> (S -> aMinus1, E -> aIsZero) 
+    (aIsZero -> W) ==> send [(Inr (), E)] ==> (E -> v0) 
+
+    // calc: b + (a - 1) * b
+    (bCopyS -> W, aMinus1 -> N) ==> use mult ==> (E -> b_Mult_a_Minus1) 
+    (bCopyE -> W, b_Mult_a_Minus1 -> N) ==> use plus ==> (E -> b_Mult_a)
+end
+
+// N(b) - W(a)
+module (b -> N, a -> W) ==> subtract ==> (bMinus0, result) 
+    (b -> W) ==> send [(W, S), (W, E)] ==> (S -> bCopyS, E -> bCopyE) 
+    (bCopyS -> N) ==> case N of S, E ==> (S -> bMinus1) 
+    
+    // if a == 0, output b 
+    (a -> N) ==> case N of S, E ==> (S -> aMinus1, E -> aIsZero) 
+    (bCopyE -> N, aIsZero -> W) ==> send [(N, E)] ==> (E -> bMinus0) 
+
+    // calc: (b - 1) - (a - 1) 
+    (aMinus1 -> W, bMinus1 -> N) ==> use subtract ==> (E -> result) 
+end
+
+module (a -> N, acc -> W) ==> factorial0 ==> (result, result1) 
+  (a -> W) ==> split (W, W) ==> (E -> a_A, S -> a_B)
+  (acc -> W) ==> split (W, W) ==> (S -> accS, E -> accE)
+
+  (a_A -> N) ==> case N of S, E ==> (S -> aMinus1, E -> aIsZero) 
+  (a_B -> N, accS -> W) ==> use mult ==> (E -> product)
+
+  (aIsZero -> N, accE -> W) ==> send [(W, E)] ==> (E -> result1)
+  (aMinus1 -> N, product -> W) ==> use factorial0 ==> (E -> result)
+end
+
+module (a -> N) ==> factorial ==> (result) 
+  (a -> W) ==> send [(W, S), (W, E)] ==> (S -> aCopyS, E -> aCopyE) 
+  (aCopyS -> N) ==> case N of S, E ==> (S -> aMinus1) 
+  (aMinus1 -> N, aCopyE -> W) ==> use factorial0 ==> (E -> result)
+end
+
+
+module () ==> test_plus ==> (result)
+    () ==> send[(Inl Inl Inl Inr (), S), (Inl Inl Inr (), E)] ==> (S -> v3, E -> v2)
+    (v3 -> N, v2 -> W) ==> use plus ==> (E -> result)
+end
+
+module () ==> test_mult ==> (result)
+    () ==> send[(Inl Inl Inl Inr (), S), (Inl Inl Inr (), E)] ==> (S -> v3, E -> v2)
+    (v3 -> N, v2 -> W) ==> use mult ==> (E -> result)
+end
+
+module () ==> test_subtract ==> (result)
+    () ==> send[(Inl Inl Inl Inr (), S), (Inl Inl Inr (), E)] ==> (S -> v3, E -> v2)
+    (v2 -> W, v3 -> N) ==> use subtract ==> (E -> result)
+end

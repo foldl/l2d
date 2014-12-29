@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="l2d.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="l2d"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="5" Y="7"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Lang.pas"/>
+        <UnitName Value="Lang"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="891"/>
+        <CursorPos X="1" Y="899"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Compiler.pas"/>
+        <UnitName Value="Compiler"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1495"/>
+        <CursorPos X="74" Y="1394"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="819" Column="1" TopLine="805"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="821" Column="1" TopLine="805"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="824" Column="1" TopLine="805"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="825" Column="1" TopLine="805"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="826" Column="1" TopLine="805"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="828" Column="1" TopLine="805"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="829" Column="1" TopLine="806"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="832" Column="1" TopLine="809"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="860" Column="53" TopLine="848"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="863" Column="1" TopLine="848"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="865" Column="1" TopLine="848"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="866" Column="1" TopLine="848"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="867" Column="49" TopLine="857"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="870" Column="1" TopLine="857"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="874" Column="59" TopLine="863"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="873" Column="1" TopLine="866"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="879" Column="1" TopLine="824"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="831" Column="35" TopLine="824"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="862" Column="1" TopLine="854"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="863" Column="1" TopLine="854"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="865" Column="1" TopLine="854"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="866" Column="1" TopLine="854"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="868" Column="24" TopLine="860"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="863" Column="72" TopLine="860"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="843" Column="59" TopLine="830"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="909" Column="1" TopLine="901"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="833" Column="33" TopLine="824"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="835" Column="28" TopLine="824"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="868" Column="45" TopLine="860"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Lang.pas"/>
+        <Caret Line="56" Column="27" TopLine="48"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>
