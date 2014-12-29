@@ -15,6 +15,7 @@ This is a Lazarus console application.
 
 See Ohmega.txt which is extracted from the codex.
 
+```
 ,.....|...............................,
 :plus | *==================*          :
 ------#>!send [(W,S),(W,E)]!-+        :
@@ -26,6 +27,7 @@ See Ohmega.txt which is extracted from the codex.
 :     +->!use plus!->!send[(Inl W,E)]!-
 :        *========*  *===============*:
 ,.....................................,
+```
 
 L2D
 ===
@@ -35,7 +37,7 @@ L2D is a text-favored 2d. Wires have names.
 
 A l2d translation of `plus`:
 
-'''
+```
 module (a -> N, b -> W) ==> plus2 ==> (bPlus0, b_Plus_a) 
     // repeat b 
     (b -> W) ==> send [(W, S), (W, E)] ==> (S -> bCopyS, E -> bCopyE) 
@@ -48,5 +50,5 @@ module (a -> N, b -> W) ==> plus2 ==> (bPlus0, b_Plus_a)
     (bCopyS -> W, aMinus1 -> N) ==> use plus2 ==> (E -> b_Plus_a_Minus1) 
     (b_Plus_a_Minus1 -> W) ==> send [(Inl W, E)] ==> (E -> b_Plus_a)
 end
-'''
+```
 
